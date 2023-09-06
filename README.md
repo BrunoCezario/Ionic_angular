@@ -1,1 +1,1 @@
-# Ionic_angular
+Exercicios de Ionic com Angular.
