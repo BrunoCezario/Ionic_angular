@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="cor">
+    FICHA CADASTRAL DE IDOSO ACIMA CDE 65 ANOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title class="ion-text-center azul">INSS- CADASTROS</ion-card-title>
+    <ion-card-subtitle class="ion-text-center azul">ATENDIMENTO ESPECIAL</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <b>Lembre-se de cadastrar seus dadaos corretamente para agilizar o atendimento</b>  </ion-card-content>
+</ion-card>
+<br>
+  <ion-content>
+    <ion-item>
+      <ion-icon name="diamond-outline"></ion-icon>
+      <ion-input  label="Nome" label-placement="floating"
+      fill="solid" maxlength="150" >
+    </ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-icon name="bandage-outline"></ion-icon>
+      <ion-input  label="CPF" label-placement="floating"
+      fill="solid" maxlength="150" value="900.000.233-45"[readonly]="true">
+    </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="basketball-outline"></ion-icon>
+      <ion-input label="Idade"label-placement="floating"
+      fill="solid" type="number"  maxlength="2"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-icon name="ear-outline"></ion-icon>
+      <ion-input label="Senha"label-placement="floating"
+       maxlength="6"  fill="solid" type="password" [counter]="true">
+      </ion-input>
+    </ion-item>
+  <br>
+  <ion-item>
+    <ion-icon name="eye-outline"></ion-icon>
+  <ion-input
+  type="email"
+  fill="solid"
+  label="Email"
+  labelPlacement="floating"
+  helperText="Entre com o email valido"
+  errorText="Invalid email"
+  ngModel
+  email
+></ion-input>
+
+    </ion-item>
+    <ion-button (click)="recado()" expand="full">Cadastrar</ion-button>
+</ion-content>
+
+
