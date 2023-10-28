@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     LOGIN
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="fGroup">
+<br/>
+<ion-input label-placement="floating"
+ formControlName="nome"
+ fill="outline" placeholder="Digite seu nome" #n></ion-input>
+ <div *ngIf="fGroup.controls['nome'].errors">
+  <p *ngIf="fGroup.controls['nome'].errors['required']">
+    Campo Obrigatório</p>
+ </div>
+<br/>
+<ion-input label="email" label-placement="floating"
+formControlName="email" type="text"
+ fill="outline" placeholder="Digite seu login" #l></ion-input>
+<br/>
+<ion-input label="senha" label-placement="floating" type="password"
+formControlName="senha"
+fill="outline" placeholder="Digite sua senha" #s></ion-input>
+<br/>
+<ion-input label="descricao" label-placement="floating"
+formControlName="descricao" [ngModelOptions]="{standalone:true}"
+fill="outline"  #d></ion-input>
+<br/>
+</form>
+<div>
+  <ion-button expand="block" color="success" (click)="submitForm"
+  [disabled]="!this.fGroup.valid"
+    >ACESSAR
+    <ion-icon slot="start" name="star">
+
+    </ion-icon></ion-button>
+</div>
+<!-- <div >
+  <ion-button expand="block" >CADASTRAR
+    <ion-icon slot="start" name="person-circle"></ion-icon></ion-button>
+</div> -->
+
+
+<!-- <iframe data-tap-disabled="true"
+src="https://www.invertexto.com/minha-localizacao-atual"
+allow="geolocation"></iframe>
+
+<iframe data-tap-disabled="true"
+src="https://www.tesourodireto.com.br/titulos/calculadora.htm" width="80%" height="50%" frameborder="0" allowfullscreen
+></iframe> -->
+
+
+
+</ion-content>

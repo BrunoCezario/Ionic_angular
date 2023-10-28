@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     LOGIN
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<br/>
+<ion-input label="login" label-placement="floating"
+ fill="outline" placeholder="Digite seu login" #l></ion-input>
+<br/>
+<ion-input label="senha" label-placement="floating"
+fill="outline" placeholder="Digite sua senha" #s></ion-input>
+<br/>
+<div>
+  <ion-button expand="block" color="success"
+  (click)="verificaLogin(l.value,s.value)"
+  >ACESSAR <ion-icon slot="start" name="star"></ion-icon></ion-button>
+</div>
+<div >
+  <ion-button expand="block" >CADASTRAR
+    <ion-icon slot="start" name="person-circle"></ion-icon></ion-button>
+</div>
+
+</ion-content>
