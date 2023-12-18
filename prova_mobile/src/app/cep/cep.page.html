@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CONSULTA O CEP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br/>
+<br/>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+<ion-input label="cep" label-placement="floating" fill="outline"
+ placeholder="Digite seu CEP" value=""#valor></ion-input>
+
+ <ion-button expand="block" color="warning"
+ (click)="consultaCep(valor.value)"> Consultar
+  <ion-icon slot="start" name="star"></ion-icon></ion-button>
+</ion-item>
+<br/>
+<ion-item>
+  <ion-input readonly="readonly" abel-placement="floating" value="{{cep}}"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input readonly="readonly" abel-placement="floating" value="{{logradouro}}"></ion-input>
+</ion-item>
+  <ion-item>
+    <ion-input readonly="readonly" abel-placement="floating" value="{{bairro}}"></ion-input>
+</ion-item>
+<ion-item>
+      <ion-input readonly="readonly" abel-placement="floating" value="{{localidade}}"></ion-input>
+</ion-item>
+  </ion-list>
+<ion-button exopand="block" colo="warning"
+(click)="paginaLogin()"> voltar para Login
+    <ion-icon slot="start" name="star"></ion-icon>
+</ion-button>
+</ion-content>
